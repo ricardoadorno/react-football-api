@@ -25,12 +25,12 @@ This is a simple API that allows you to get information about football teams.
 
 ## Usage:
 
-First, you must to select the following options in this order:
+First, you must to select the following options:
 
-1. Select Contry
-1. Select Sesson
-1. Select League
-1. Select Team
+- Select Sesson
+- Select Contry
+  - Select League
+    - Select Team
 
 Then, you can find the following information about the team:
 
