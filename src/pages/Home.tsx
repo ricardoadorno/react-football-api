@@ -14,65 +14,62 @@ export default function Home() {
 
   return (
     <div>
-      <h2>Selected country: {selectedCountry}</h2>
-      <h2>Selected season: {selectedSeason}</h2>
+      <h1>Football API</h1>
+      <nav className="navbar">
+        <select
+          className="select-input"
+          onChange={(e) => setSelectedCountry(e.target.value)}
+        >
+          <option defaultValue="country">Country</option>
+          {countries.map((country: any) => (
+            <option key={country.name} value={country.name}>
+              {country.name}
+            </option>
+          ))}
+        </select>
+        <select
+          className="select-input"
+          onChange={(e) => setSelectedSeason(e.target.value)}
+        >
+          <option value="session">Session</option>
+          {seasons.map((season) => (
+            <option key={season} value={season}>
+              {season}
+            </option>
+          ))}
+        </select>
+        <select
+          className="select-input"
+          disabled={!selectedCountry && !selectedSeason}
+          onChange={(e) => setSelectedLeague(e.target.value)}
+        >
+          <option value="league">League</option>
+          {leagues.map((league: any) => (
+            <option key={league.league.id} value={league.league.id}>
+              {league.league.name}
+            </option>
+          ))}
+        </select>
+      </nav>
 
-      <select onChange={(e) => setSelectedCountry(e.target.value)}>
-        <option defaultValue="country">Country</option>
-        {countries.map((country: any) => (
-          <option key={country.name} value={country.name}>
-            {country.name}
-          </option>
-        ))}
-      </select>
-
-      <select onChange={(e) => setSelectedSeason(e.target.value)}>
-        <option value="session">Session</option>
-        {seasons.map((season) => (
-          <option key={season} value={season}>
-            {season}
-          </option>
-        ))}
-      </select>
-
-      <select
-        disabled={!selectedCountry && !selectedSeason}
-        onChange={(e) => setSelectedLeague(e.target.value)}
-      >
-        <option value="league">League</option>
-        {leagues.map((league: any) => (
-          <option key={league.league.id} value={league.league.id}>
-            {league.league.name}
-          </option>
-        ))}
-      </select>
-
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
-      >
+      <div className="cards-container">
         {teams.map((team: any) => (
           <TeamCard key={team.team.id} team={team.team} />
         ))}
       </div>
-
+      {/* 
       <button
         onClick={async () => setCountries(await getDataByEndpoint("countries"))}
       >
         Get countries
-      </button>
-      <button
+      </button> */}
+      {/* <button
         onClick={async () =>
           setSeasons(await getDataByEndpoint("leagues/seasons"))
         }
       >
         Get session
       </button>
-
       <button
         onClick={async () => {
           setLeagues(
@@ -84,7 +81,6 @@ export default function Home() {
       >
         Get leagues
       </button>
-
       <button
         onClick={async () => {
           setTeams(
@@ -95,7 +91,7 @@ export default function Home() {
         }}
       >
         Get Teams
-      </button>
+      </button> */}
     </div>
   );
 }

@@ -27,7 +27,7 @@ This is a simple API that allows you to get information about football teams.
 
 First, you must to select the following options:
 
-- Select Sesson
+- Select Season
 - Select Contry
   - Select League
     - Select Team

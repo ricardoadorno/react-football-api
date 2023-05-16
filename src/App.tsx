@@ -5,10 +5,12 @@ import TeamPage from "./pages/TeamPage";
 export default function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/team/:id" element={<TeamPage />} />
-      </Routes>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/team/:id" element={<TeamPage />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@import "variables.scss";
+@import "mixins.scss";
+@import "utils.scss";
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: $background-color;
+  margin: 0;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 3rem auto;
+}
