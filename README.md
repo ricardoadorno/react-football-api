@@ -37,9 +37,9 @@ Then, you can find the following information about the team:
 - Find the team player list
   - Name
   - Age
-  - Nationalaty
-- Most used formation
-- Results table
+  - Nationality
+- Lineups
+- Fixtures table
   - Total Games
   - Total Victories
   - Total Defeats
